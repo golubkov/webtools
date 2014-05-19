@@ -19,15 +19,15 @@ import com.progekt.webtools.viewpagerindicator.TitlePageIndicator;
 
 public class MainActivity extends Activity {
     /** Called when the activity is first created. */
-	
+
 	List<View> views;
 	private TextView tvHello;
-	MyTask mt;
+	
     public native String  stringFromJNI(String S);
     public native String Whois(String S);
     public native String PortScan(String Host,String Sport, String EPort);
-   
-	
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,16 +36,16 @@ public class MainActivity extends Activity {
 
         LayoutInflater inflater = LayoutInflater.from(this);
         views = new ArrayList<View>();
-        
+
         View page = inflater.inflate(R.layout.first, null);
         views.add(page);
-        
+
         page = inflater.inflate(R.layout.second, null);
         views.add(page);
-        
+
         page = inflater.inflate(R.layout.third, null);
         views.add(page);
-        
+
         MyPageAdapter adapter = new MyPageAdapter(views);
         ViewPager pager = (ViewPager)findViewById( R.id.viewpager );
         TitlePageIndicator indicator = (TitlePageIndicator)findViewById( R.id.indicator );
@@ -54,7 +54,7 @@ public class MainActivity extends Activity {
     }
     public void onClick(View v) {
     	switch (v.getId())
-        { 
+        {
             case R.id.PortScan_button:
          	EditText HostName = (EditText) findViewById(R.id.editHostName);
        		 	EditText StartPort = (EditText) findViewById(R.id.editStartPort);
@@ -62,7 +62,7 @@ public class MainActivity extends Activity {
     		 	final String HostName1 = HostName.getText().toString();
     		 	final String StartPort1 = StartPort.getText().toString();
     		 	final String EndPort1 = EndPort.getText().toString();
-    		 	
+
     		 	tvHello = (TextView) findViewById(R.id.textView15);
     		 	 new Thread(new Runnable(){
     		         public void run(){
@@ -75,7 +75,7 @@ public class MainActivity extends Activity {
                 break;
             case R.id.Whois_button:
              	EditText HostNameW = (EditText) findViewById(R.id.editHostNameW);
-    		 	final String HostNameW1 = HostNameW.getText().toString();    		 	
+    		 	final String HostNameW1 = HostNameW.getText().toString();
     		 	tvHello = (TextView) findViewById(R.id.textView16);
     		 	 new Thread(new Runnable(){
     		         public void run(){
@@ -103,7 +103,7 @@ public class MainActivity extends Activity {
     static {
         System.loadLibrary("hello-jni");
     }
-    
-    
-        
-} 
+
+
+
+}

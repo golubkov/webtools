@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#777"
+    android:layout_centerVertical="true">
+<TableRow>
+    <EditText
+        android:id="@+id/editHostName"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:paddingLeft="5dp"
+        android:hint="Enter hostname or IP"
+        android:inputType="textUri" 
+        android:textSize="14dp"
+        android:textColor="#000"
+        android:background="#AAA"
+        />
+    <EditText
+        android:id="@+id/editStartPort"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="14dp"
+        android:textColor="#000"
+        android:paddingLeft="5dp"
+        android:hint="0"
+        android:inputType="number"
+        android:maxLength="5"
+        android:background="#AAA"
+         />
+
+    <EditText
+        android:id="@+id/editEndPort"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#AAA"
+        android:ems="10"
+        android:hint="0"
+        android:inputType="number"
+        android:maxLength="5"
+        android:paddingLeft="5dp"
+        android:textSize="14dp"
+        android:textColor="#000"
+         >
+
+        <requestFocus />
+    </EditText>
+
+</TableRow>
+
+
+<TableRow>
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world"
+        android:layout_span="2"
+        android:paddingTop="20dp"
+        />
+    
+    <Button
+        android:id="@+id/PortScan_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="40dp"
+        android:onClick="onClick"
+        android:src="@drawable/button2"
+        />
+       
+</TableRow>
+</TableLayout>

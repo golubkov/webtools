@@ -7,9 +7,9 @@
 <TableRow>
     <EditText
         android:id="@+id/editHostName"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="25dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="5dp"
         android:layout_marginTop="10dp"
         android:ems="10"
         android:paddingLeft="5dp"
@@ -21,9 +21,9 @@
         />
     <EditText
         android:id="@+id/editStartPort"
-        android:layout_width="80dp"
+        android:layout_width="50dp"
         android:layout_height="25dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="5dp"
         android:layout_marginTop="10dp"
         android:textSize="14dp"
         android:textColor="#000"
@@ -36,9 +36,9 @@
 
     <EditText
         android:id="@+id/editEndPort"
-        android:layout_width="80dp"
+        android:layout_width="50dp"
         android:layout_height="25dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="5dp"
         android:layout_marginTop="10dp"
         android:background="#AAA"
         android:ems="10"
@@ -58,22 +58,35 @@
 
 <TableRow>
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/textView0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world"
         android:layout_span="2"
         android:paddingTop="20dp"
         />
     
-    <Button
+    <ImageView
         android:id="@+id/PortScan_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="40dp"
         android:onClick="onClick"
-        android:src="@drawable/button2"
+		android:src="@drawable/button2"
         />
        
+</TableRow>
+<TableRow>
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_span="3"
+        android:paddingTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="#000"
+        android:textSize="12dp"
+        android:typeface="monospace"
+        android:background="@drawable/backgrd"
+        />
 </TableRow>
 </TableLayout>

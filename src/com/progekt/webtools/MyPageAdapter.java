@@ -18,9 +18,9 @@ public class MyPageAdapter extends PagerAdapter implements TitleProvider{
 
 	private static String[] titles = new String[]
 		    {
-		        "PortScan",
-		        "WhoIs",
-		        "Page 3 "
+		        "Page 1",
+		        "Page 2",
+		        "Page 3"
 		    };
 		 
 		    public MyPageAdapter(List<View> inViews )

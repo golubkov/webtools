@@ -22,7 +22,6 @@ public class MainActivity extends Activity {
 	
 	List<View> views;
 	private TextView tvHello;
-	MyTask mt;
     public native String  stringFromJNI(String S);
     public native String Whois(String S);
     public native String PortScan(String Host,String Sport, String EPort);

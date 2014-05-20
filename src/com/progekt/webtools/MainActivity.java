@@ -1,9 +1,7 @@
 package com.progekt.webtools;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
@@ -22,7 +20,7 @@ public class MainActivity extends Activity {
 
 	List<View> views;
 	private TextView tvHello;
-	
+
     public native String  stringFromJNI(String S);
     public native String Whois(String S);
     public native String PortScan(String Host,String Sport, String EPort);

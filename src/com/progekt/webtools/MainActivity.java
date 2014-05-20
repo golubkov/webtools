@@ -20,9 +20,8 @@ public class MainActivity extends Activity {
 	List<View> views;
 	private TextView tvHello;
 
-    public native String Whois(String S);
-    public native String PortScan(String Host,String Sport, String EPort);
-
+    public native void Whois(String S);
+    public native void PortScan(String Host,String Sport, Styu7632
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

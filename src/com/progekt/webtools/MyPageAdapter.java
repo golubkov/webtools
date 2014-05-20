@@ -20,7 +20,7 @@ public class MyPageAdapter extends PagerAdapter implements TitleProvider{
 		    {
 		        "PortScan",
 		        "WhoIs",
-		        "Page 3"
+		        "Page 3 "
 		    };
 		 
 		    public MyPageAdapter(List<View> inViews )

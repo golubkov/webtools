@@ -55,15 +55,15 @@
     
     <style name="CustomTitlePageIndicator">
         <!-- color de fondo de toda la barra en la que se muestra el nombre -->
-        <item name="android:background">#eaeaea</item>
+        <item name="android:background">#777</item>
         <!-- color de la barra indicadora, debajo de los nombres -->
-        <item name="footerColor">#b2cb39</item>
+        <item name="footerColor">#000</item>
         <!-- ancho linea inferior del footer -->
         <item name="footerLineHeight">2dp</item>
         <!-- ancho de la barra inferior al nombre -->
         <item name="footerIndicatorHeight">4dp</item>
         <!-- estilo del indicador inferior "none","triangle","underline"-->
-        <item name="footerIndicatorStyle">underline</item>
+        <item name="footerIndicatorStyle">triangle</item>
         <!-- color del texto -->
         <item name="android:textColor">@android:color/black</item>
         <!-- color del texto de la página seleccionada -->

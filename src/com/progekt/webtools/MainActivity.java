@@ -59,7 +59,7 @@ public class MainActivity extends Activity {
       final String HostName1 = HostName.getText().toString();
       final String StartPort1 = StartPort.getText().toString();
       final String EndPort1 = EndPort.getText().toString();
-
+      PortScanView = (TextView) findViewById(R.id.textView15);
     //  tvHello = (TextView) findViewById(R.id.textView15);
       new Thread(new Runnable(){
         public void run(){
@@ -73,6 +73,7 @@ public class MainActivity extends Activity {
       case R.id.Whois_button:
       EditText HostNameW = (EditText) findViewById(R.id.editHostNameW);
       final String HostNameW1 = HostNameW.getText().toString();
+      WhoisView = (TextView) findViewById(R.id.textView16);
     //  tvHello = (TextView) findViewById(R.id.textView16);
       new Thread(new Runnable(){
         public void run(){

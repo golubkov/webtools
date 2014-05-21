@@ -18,8 +18,8 @@ public class MyPageAdapter extends PagerAdapter implements TitleProvider{
 
 	private static String[] titles = new String[]
 		    {
-		        "Page 1",
-		        "Page 2",
+		        "PortScan",
+		        "WhoIs",
 		        "Page 3"
 		    };
 		 

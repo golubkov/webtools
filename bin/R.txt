@@ -320,7 +320,7 @@ int drawable vpi__tab_unselected_focused_holo 0x7f020060
 int drawable vpi__tab_unselected_holo 0x7f020061
 int drawable vpi__tab_unselected_pressed_holo 0x7f020062
 int id PortScan_button 0x7f050047
-int id Whois_button 0x7f050049
+int id Whois_button 0x7f05004a
 int id action_bar 0x7f050020
 int id action_bar_activity_content 0x7f050015
 int id action_bar_container 0x7f05001f
@@ -385,7 +385,7 @@ int id split_action_bar 0x7f050022
 int id submit_area 0x7f05003d
 int id tabMode 0x7f050002
 int id textView15 0x7f050046
-int id textView16 0x7f05004a
+int id textView16 0x7f050049
 int id text_view 0x7f05004b
 int id title 0x7f05002f
 int id top 0x7f05001d
@@ -428,11 +428,10 @@ int layout abc_search_view 0x7f030016
 int layout abc_simple_decor 0x7f030017
 int layout activity_main 0x7f030018
 int layout first 0x7f030019
-int layout first_fragment_top 0x7f03001a
-int layout second 0x7f03001b
-int layout support_simple_spinner_dropdown_item 0x7f03001c
-int layout third 0x7f03001d
-int layout vpi__tab 0x7f03001e
+int layout second 0x7f03001a
+int layout support_simple_spinner_dropdown_item 0x7f03001b
+int layout third 0x7f03001c
+int layout vpi__tab 0x7f03001d
 int menu main 0x7f0c0000
 int string abc_action_bar_home_description 0x7f0a0001
 int string abc_action_bar_up_description 0x7f0a0002

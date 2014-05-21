@@ -93,9 +93,6 @@
         android:paddingLeft="10dp"
         android:onClick="onClick"
         android:src="@drawable/button2"
-     	android:layout_toRightOf="@id/hscroll"
-     	android:layout_alignParentRight="true"
-     	android:scaleType="matrix"
         />    
   </LinearLayout>
  

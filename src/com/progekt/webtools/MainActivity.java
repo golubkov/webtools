@@ -22,7 +22,7 @@ public class MainActivity extends Activity {
   private TextView PortScanView;
   private TextView WhoisView;
   public native void Whois(String S);
-  public native void PortScan(String Host,String Sport, Styu7632
+  public native void PortScan(String Host,String Sport, String Eport);
 
   @Override
   public void onCreate(Bundle savedInstanceState) {

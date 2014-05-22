@@ -41,6 +41,7 @@
     android:layout_weight="1"
     android:layout_marginTop="20dp"
     android:layout_marginLeft="5dp"
+    android:scrollbarThumbVertical="@drawable/custom_scroll_style"
    > 
  <TextView
         android:id="@+id/textView16"
@@ -63,6 +64,7 @@
         android:paddingLeft="10dp"
         android:onClick="onClick"
         android:src="@drawable/button2"
+         android:scaleType="matrix"
         />  
   </LinearLayout>
  

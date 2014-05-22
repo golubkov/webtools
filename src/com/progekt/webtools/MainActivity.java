@@ -40,9 +40,6 @@ public class MainActivity extends Activity {
     page = inflater.inflate(R.layout.second, null);
     views.add(page);
 
-    page = inflater.inflate(R.layout.third, null);
-    views.add(page);
-
     MyPageAdapter adapter = new MyPageAdapter(views);
     ViewPager pager = (ViewPager)findViewById( R.id.viewpager );
     TitlePageIndicator indicator = (TitlePageIndicator)findViewById( R.id.indicator );

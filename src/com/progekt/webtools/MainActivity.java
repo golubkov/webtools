@@ -24,8 +24,8 @@ public class MainActivity extends Activity {
   private TextView WhoisView;
   public native void Whois(String S);
   public native void PortScan(String Host,String Sport, String Eport);
-  private String WhoisViewTextSave;
-  private String PortScanViewTextSave;
+  private CharSequence  WhoisViewTextSave;
+  private CharSequence  PortScanViewTextSave;
 //new
   final String LOG_TAG = "myLogs";
   int cnt = 0;

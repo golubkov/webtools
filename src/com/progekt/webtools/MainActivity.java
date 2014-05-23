@@ -24,7 +24,9 @@ public class MainActivity extends Activity {
   private TextView WhoisView;
   public native void Whois(String S);
   public native void PortScan(String Host,String Sport, String Eport);
-//new  
+  private String WhoisViewTextSave;
+  private String PortScanViewTextSave;
+//new
   final String LOG_TAG = "myLogs";
   int cnt = 0;
 
@@ -34,10 +36,10 @@ public class MainActivity extends Activity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     //new
-    
+
     Log.d(LOG_TAG, "onCreate");
-   
-    
+
+
   //  tvHello = (TextView) findViewById(R.id.textView15);
     PortScanView = (TextView) findViewById(R.id.textView15);
     WhoisView = (TextView) findViewById(R.id.textView16);
@@ -57,8 +59,8 @@ public class MainActivity extends Activity {
     indicator.setViewPager( pager );
 }
   //meganew
-  
-  
+
+
   private int checkInputParametersportscan(String psh, int pssp, int psep)
   {
 	  	if (psh.length() != 0)
@@ -83,64 +85,68 @@ public class MainActivity extends Activity {
 	  	}
       return ALERT_NONE;
   }
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
   //new
-  
-  
-  
-  
-  
-protected void onDestroy() {
-  super.onDestroy();
-  Log.d(LOG_TAG, "onDestroy");
-}
 
-protected void onPause() {
-  super.onPause();
-  Log.d(LOG_TAG, "onPause");
-}
 
-protected void onRestart() {
-  super.onRestart();
-  Log.d(LOG_TAG, "onRestart");
-}
+
+
+
+// protected void onDestroy() {
+//   super.onDestroy();
+//   Log.d(LOG_TAG, "onDestroy");
+// }
+
+// protected void onPause() {
+//   super.onPause();
+//   Log.d(LOG_TAG, "onPause");
+// }
+
+// protected void onRestart() {
+//   super.onRestart();
+//   Log.d(LOG_TAG, "onRestart");
+// }
 
 protected void onRestoreInstanceState(Bundle savedInstanceState) {
+  WhoisView.setText(WhoisViewTextSave);
+  PortScanView.setText(PortScanViewTextSave);
   super.onRestoreInstanceState(savedInstanceState);
   Log.d(LOG_TAG, "onRestoreInstanceState");
 }
 
-protected void onResume() {
-  super.onResume();
-  Log.d(LOG_TAG, "onResume ");
-}
+// protected void onResume() {
+//   super.onResume();
+//   Log.d(LOG_TAG, "onResume ");
+// }
 
 protected void onSaveInstanceState(Bundle outState) {
   super.onSaveInstanceState(outState);
-  Log.d(LOG_TAG, "onSaveInstanceState");
+  WhoisViewTextSave=WhoisView.getText();
+  PortScanViewTextSave=PortScanView.getText();
+  // Log.d(LOG_TAG, "onSaveInstanceState");
 }
 
-protected void onStart() {
-  super.onStart();
-  Log.d(LOG_TAG, "onStart");
-}
+// protected void onStart() {
+//   super.onStart();
+//   Log.d(LOG_TAG, "onStart");
+// }
+//
+// protected void onStop() {
+//   super.onStop();
+//   Log.d(LOG_TAG, "onStop");
+// }
 
-protected void onStop() {
-  super.onStop();
-  Log.d(LOG_TAG, "onStop");
-}
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
   public void onClick(View v) {
     switch (v.getId())
     {

@@ -56,7 +56,44 @@ public class MainActivity extends Activity {
     pager.setAdapter( adapter );
     indicator.setViewPager( pager );
 }
+  //meganew
+  
+  
+  private int checkInputParametersportscan(String psh, int pssp, int psep)
+  {
+	  	if (psh.length() != 0)
+	  	{
+	  		return alert_scanporthost;
+	  	}
+	  	if (pssp==0)
+	  	{
+	  		return alert_scanportsport;
+	  	}
+	  	if (psep==0)
+	  	{
+	  		return alert_scanporteport;
+	  	}
+	  	if (pssp<psep)
+	  	{
+	  		return alert_scanportdifference;
+	  	}
+	  	if (0 < pssp &  pssp<65536 & 0 <psep & psep<65536)
+	  	{
+	  		return alert_scanportlenght;
+	  	}
+      return ALERT_NONE;
+  }
+  
+  
+  
+  
+  
+  
   //new
+  
+  
+  
+  
   
 protected void onDestroy() {
   super.onDestroy();

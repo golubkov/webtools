@@ -111,8 +111,10 @@ public class MainActivity extends Activity {
 //   super.onRestart();
 //   Log.d(LOG_TAG, "onRestart");
 // }
-
+@Overide
 protected void onRestoreInstanceState(Bundle savedInstanceState) {
+  PortScanView = (TextView) findViewById(R.id.textView15);
+  WhoisView = (TextView) findViewById(R.id.textView16);
   WhoisView.setText(WhoisViewTextSave);
   PortScanView.setText(PortScanViewTextSave);
   super.onRestoreInstanceState(savedInstanceState);
@@ -123,8 +125,10 @@ protected void onRestoreInstanceState(Bundle savedInstanceState) {
 //   super.onResume();
 //   Log.d(LOG_TAG, "onResume ");
 // }
-
+@Overide
 protected void onSaveInstanceState(Bundle outState) {
+  PortScanView = (TextView) findViewById(R.id.textView15);
+  WhoisView = (TextView) findViewById(R.id.textView16);
   super.onSaveInstanceState(outState);
   WhoisViewTextSave=WhoisView.getText();
   PortScanViewTextSave=PortScanView.getText();

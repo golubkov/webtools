@@ -43,6 +43,11 @@ public class MainActivity extends Activity {
   //  tvHello = (TextView) findViewById(R.id.textView15);
     PortScanView = (TextView) findViewById(R.id.textView15);
     WhoisView = (TextView) findViewById(R.id.textView16);
+    if(savedInstanceState!=null)
+    {
+      PortScanView.setText(PortScanViewTextSave);
+      WhoisView.setText(WhoisViewTextSave);
+    }
     LayoutInflater inflater = LayoutInflater.from(this);
     views = new ArrayList<View>();
 
@@ -113,11 +118,13 @@ public class MainActivity extends Activity {
 // }
 @Overide
 protected void onRestoreInstanceState(Bundle savedInstanceState) {
-  PortScanView = (TextView) findViewById(R.id.textView15);
-  WhoisView = (TextView) findViewById(R.id.textView16);
-  WhoisView.setText(WhoisViewTextSave);
-  PortScanView.setText(PortScanViewTextSave);
+  // PortScanView = (TextView) findViewById(R.id.textView15);
+  // WhoisView = (TextView) findViewById(R.id.textView16);
+  // WhoisView.setText(WhoisViewTextSave);
+  // PortScanView.setText(PortScanViewTextSave);
   super.onRestoreInstanceState(savedInstanceState);
+  PortScanViewTextSave=savedInstanceState.getCharSequence("PortScanText");
+  WhoisViewTextSave=savedInstanceState.getCharSequence("WhoisText");
   Log.d(LOG_TAG, "onRestoreInstanceState");
 }
 
@@ -127,11 +134,14 @@ protected void onRestoreInstanceState(Bundle savedInstanceState) {
 // }
 @Overide
 protected void onSaveInstanceState(Bundle outState) {
-  PortScanView = (TextView) findViewById(R.id.textView15);
-  WhoisView = (TextView) findViewById(R.id.textView16);
+  // PortScanView = (TextView) findViewById(R.id.textView15);
+  // WhoisView = (TextView) findViewById(R.id.textView16);
   super.onSaveInstanceState(outState);
-  WhoisViewTextSave=WhoisView.getText();
-  PortScanViewTextSave=PortScanView.getText();
+  outState.putCharSequence("PortScanText",PortScanViewTextSave);
+  outState.putCharSequence("WhoisText",WhoisViewTextSave);
+
+  // WhoisViewTextSave=WhoisView.getText();
+  // PortScanViewTextSave=PortScanView.getText();
   // Log.d(LOG_TAG, "onSaveInstanceState");
 }
 
@@ -196,6 +206,7 @@ protected void onSaveInstanceState(Bundle outState) {
       @Override
       public void run(){
         PortScanView.setText(value);
+        PortScanViewTextSave=PortScanView.getText();
         //  tvHello.setText(value);
       }
     });
@@ -207,6 +218,7 @@ protected void onSaveInstanceState(Bundle outState) {
       @Override
       public void run(){
         WhoisView.setText(value);
+        WhoisViewTextSave=WhoisView.getText();
         //  tvHello.setText(value);
       }
     });

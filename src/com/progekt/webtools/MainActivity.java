@@ -1,18 +1,21 @@
 package com.progekt.webtools;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.os.AsyncTask;
+import android.widget.Toast;
 import android.util.Log;
-import android.content.DialogInterface;
 import com.progekt.webtools.viewpagerindicator.TitlePageIndicator;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 
 
 public class MainActivity extends Activity {
@@ -98,17 +101,26 @@ public class MainActivity extends Activity {
 				}
 // не используется, но пусть будет
 @Override
-	protected void onRestoreInstanceState(Bundle savedInstanceState) {
-		super.onRestoreInstanceState(savedInstanceState);
-		PortScanViewTextSave=savedInstanceState.getCharSequence("PortScanText");
-		WhoisViewTextSave=savedInstanceState.getCharSequence("WhoisText");
-	}
+	 protected void onRestoreInstanceState(Bundle savedInstanceState) {
+	 PortScanView = (TextView) findViewById(R.id.textView15);
+	 WhoisView = (TextView) findViewById(R.id.textView16);
+	 WhoisView.setText(WhoisViewTextSave);
+	 PortScanView.setText(PortScanViewTextSave);
+	 super.onRestoreInstanceState(savedInstanceState);
+	 PortScanViewTextSave=savedInstanceState.getCharSequence("PortScanText");
+	 WhoisViewTextSave=savedInstanceState.getCharSequence("WhoisText");
+	  }	
+	
 @Override
-	protected void onSaveInstanceState(Bundle outState) {
-		super.onSaveInstanceState(outState);
-		outState.putCharSequence("PortScanText",PortScanViewTextSave);
-		outState.putCharSequence("WhoisText",WhoisViewTextSave);
-	}
+	   protected void onSaveInstanceState(Bundle outState) {
+	   PortScanView = (TextView) findViewById(R.id.textView15);
+	   WhoisView = (TextView) findViewById(R.id.textView16);
+	   super.onSaveInstanceState(outState);
+	   WhoisViewTextSave=WhoisView.getText();
+	   PortScanViewTextSave=PortScanView.getText();
+	   outState.putCharSequence("PortScanText",PortScanViewTextSave);
+	   outState.putCharSequence("WhoisText",WhoisViewTextSave);
+	  }
 public void onClick(View v) {
     switch (v.getId())
     {

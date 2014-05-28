@@ -10,3 +10,7 @@ local.properties
 webtools.iml
 
 .idea/gradle.xml
+
+.idea/modules.xml
+
+.idea/misc.xml
